@@ -1,11 +1,9 @@
 
 
+
 <html>
 
 <head>
-  
-
-<meta name="monetag" content="d6de8c9aa36ca23efd21e111922c4f68">
 
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -19,6 +17,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
 
   <style>
     body {
@@ -141,6 +140,39 @@
   opacity: 1;
   color: blue;
 }
+	  
+        #words {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ff0000; /* Color dorado */
+  text-shadow: 0 0 5px #e5be01; /* Sombra dorada */
+  animation: golden 2s ease-in-out infinite; /* Animación dorada */
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      #words marquee {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      @keyframes golden {
+  0% {
+    text-shadow: 0 0 5px #ffd500;
+  }
+  50% {
+    text-shadow: 0 0 20px #ffd500;
+  }
+  100% {
+    text-shadow: 0 0 5px #ffd500;
+  }
+}
+	     #native-ad-container {
+        background-color: #f2f2f2;
+        padding: 10px;
+        /* Agrega otros estilos personalizados según tus necesidades */
+    }
   </style>
 
 </head>
@@ -151,24 +183,26 @@
 
   <div class="contenedor">
 
-
+<script>
+    // Llama al método en el WebViewJavaScriptInterface para cargar el anuncio nativo
+    AndroidInterface.cargarAnuncioNativo();
+</script>
 
     <div class="topnav" id="myTopnav">
-      <a href="javascript:location.reload()"  class="active">Refresh</a>
+      <a href="javascript:location.reload()" id="dongoo"  class="active">Refresh</a>
   
-      <!-- <a href="canales.html"> Deportes </a>
-    <a href="note.html"> Canales </a>-->
-
+      <div id="words">
+      <marquee behavior="scroll" direction="left"></marquee>
+    </div>
+<div id="native-ad-container"></div>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
       </a>
     </div>
     <br>
- <!--<div class="alert">
-      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-      <strong>Atancion!</strong>  discargen ** <B style="color:#c50e0e">IBRAFOR</B> ** Esta en PlayStore. en la pagina inicio hace 4 clicks en refresh para ver los partidos sin publicidad 
-    </div>
---> 
+
+	  
+	  
     <div id="wrapper">
       <ul class="menu">
 
@@ -182,7 +216,7 @@
 <!-- REDIRECTING STARTS  
 
 <script type='text/javascript'>
-  var url = "https://sucratus.cfd/";
+  var url = "https://pawkar.pages.dev/";
   if(typeof IE_fix != "undefined") // IE8 and lower fix to pass the http referer
   {
       document.write("redirecting..."); // Don&#39;t remove this line or appendChild() will fail because it is called before document.onload to make the redirect as fast as possible. Nobody will see this text, it is only a tech fix.
@@ -194,6 +228,7 @@
   else { window.location.replace(url); } // All other browsers
 </script>                                                                         
 
+
 -->
 
 
@@ -202,7 +237,8 @@
 
 <!-- Credit goes to http://insider.zone/ -->
 <!-- REDIRECTING ENDS -->
-	
+
+
 
 	
 <center><div class="sombreada_css3"><font size=2 face="Helvetica Neue,Helvetica,Arial,sans-serif" color="#FFFFFF">
@@ -543,24 +579,34 @@
         <li class="subitem1"><a href="" >ESPN EXTRA<span>Calidad 720p</span></a></li>
        </ul>
           </li>
-          <center>
-            <div class="sombreada_css3">
-              <font size=2 face="Helvetica Neue,Helvetica,Arial,sans-serif" color="#FFFFFF">
-                <b></b>
-              </font>
-            </div>
-          </center>
-
-     
-          <center>
-            <div class="sombreada_css3">
-              <font size=2 face="Helvetica Neue,Helvetica,Arial,sans-serif" color="#FFFFFF">
-                <b></b>
-              </font>
-            </div>
-          </center>
-   <br>
   
+  <center>
+    <div class="sombreada_css3">
+      <font size=2 face="Helvetica Neue,Helvetica,Arial,sans-serif" color="#FFFFFF">
+        <b></b>
+      </font>
+    </div>
+  </center>
+
+
+  <center>
+    <div class="sombreada_css3">
+      <font size=2 face="Helvetica Neue,Helvetica,Arial,sans-serif" color="#FFFFFF">
+        <b></b>
+      </font>
+    </div>
+  </center>
+<br>
+	          <script>
+        function showNativeAd(adData) {
+            // Parsea los datos del anuncio nativo recibidos como un objeto JavaScript
+            var nativeAd = JSON.parse(adData);
+
+            // Muestra el anuncio nativo en tu diseño personalizado
+            // Puedes acceder a los campos del anuncio nativo, como el título, el texto y la imagen, utilizando la variable nativeAd
+        }
+    </script>
+
           <div class="footercopyright" align="center" >
             <a href=""  style="text-decoration: none;"><strong><span class="style3">Copyright</span></strong></a><strong><span style=" color:#F0622A;" >
             </span> <span style="text-decoration: none;" >
@@ -568,9 +614,7 @@
             <font style="color:#F0622A;"></font></a>
             <span><strong>| </strong> 
             <a href="privacidad.html" style="text-decoration: none;" ><strong>
-            <span class="style3">Privacy</span></strong></a></span>&nbsp;
-            <span><strong>| <a href="" style="text-decoration: none;" >GDPR</a> |
-            <a href="dmc.html" style="text-decoration: none;">DMCA</a></strong></span></div>
+            <span class="style3">Privacy</span></strong></a></span></div>
 
       </ul>
 
@@ -632,9 +676,55 @@ if (!document.fullscreenElement) {
 }</script>
 
 
+<script>
+  var bomom = 0;
+  var dongoo = document.getElementById("dongoo");
+
+  dongoo.addEventListener("click", function(event) {
+    event.preventDefault();
+    bomom++;
+
+    if (bomom > 3) {
+      window.location.href = "https://souadus.github.io/bebachir/repro3.html?r=https://halimuss.github.io/ibrafor/";
+    }
+  });
+</script>
 
 
 
+
+ <script>
+      function updateMarquee() {
+        const now = new Date();
+        const start = new Date();
+        start.setHours(17, 15, 0, 0); // Hora de inicio: 7:15pm
+        const end = new Date();
+        end.setHours(20, 18, 0, 0); // Hora de fin: 8:18pm
+
+        if (now >= start && now <= end) {
+          fetch('1.txt')
+            .then(response => response.text())
+            .then(text => {
+              const words = text.split(/[ ,.]+/); // Separar palabras por espacios, comas y puntos
+              const marquee = document.querySelector('#words marquee');
+              marquee.innerHTML = ''; // Limpiar el marquee antes de agregar nuevas palabras
+              words.forEach(word => {
+                const span = document.createElement('span');
+                span.textContent = word;
+                marquee.appendChild(span);
+                const space = document.createTextNode(' ');
+                marquee.appendChild(space);
+              });
+            });
+        } else {
+          const marquee = document.querySelector('#words marquee');
+          marquee.innerHTML = ''; // Limpiar el marquee
+        }
+      }
+
+      updateMarquee(); // Actualizar el marquee cuando la página se carga por primera vez
+      setInterval(updateMarquee, 60000); // Actualizar el marquee cada minuto
+    </script>
 
 
 
